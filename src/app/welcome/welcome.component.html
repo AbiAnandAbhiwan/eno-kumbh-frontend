@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="form-wrapper">
+    <h1 class="text-center text-primary">Welcome to Kumbh 2025</h1>
+    <p class="text-center text-light">Register Mobile Number</p>
+    <form [formGroup]="phoneForm" class="form-group">
+      <input
+        type="text"
+        formControlName="phoneNumber"
+        class="form-control"
+        placeholder="Enter your mobile number"
+      />
+      <div
+        *ngIf="phoneForm.get('phoneNumber')?.touched && phoneForm.get('phoneNumber')?.invalid"
+        class="text-danger mt-2"
+      >
+        Please enter a valid 10-digit mobile number.
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary mt-3 w-100 text-submit"
+        (click)="submitPhone()"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

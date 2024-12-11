@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="form-wrapper">
+    <h1 class="text-center text-primary">OTP Verification</h1>
+    <p class="text-center text-light">Enter OTP</p>
+    <form [formGroup]="otpForm" class="form-group">
+      <input
+        type="text"
+        formControlName="otp"
+        class="form-control"
+        placeholder="Enter your OTP"
+      />
+      <div
+        *ngIf="otpForm.get('otp')?.touched && otpForm.get('otp')?.invalid"
+        class="text-danger mt-2"
+      >
+        Please enter a valid OTP.
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary mt-3 w-100"
+        (click)="verifyOtp()"
+      >
+        Verify
+      </button>
+    </form>
+  </div>
+</div>

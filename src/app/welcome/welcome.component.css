@@ -1,0 +1,79 @@
+body {
+  background-image: url('../../assets/images/eno.jpg') no-repeat center center fixed !important;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  /* color: white; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.form-wrapper {
+  background: rgba(22, 36, 199, 0.7); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: white; /* Adjust for your theme */
+}
+
+.text-light {
+  color: #e9ecef; /* Adjust for your theme */
+}
+
+.text-danger {
+  color: #e4dedf;
+}
+
+.text-submit{
+  color: white
+}
+
+.form-control {
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+}
+
+.btn-primary {
+  background-color: rgb(49, 111, 49);
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+.w-100 {
+  width: 100%;
+}
