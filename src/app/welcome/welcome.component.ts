@@ -15,7 +15,7 @@ export class WelcomeComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.userService.getAccessTokenForMappls().subscribe();
+    // this.userService.getAccessTokenForMappls().subscribe();
   }
 
   phoneNumber: string = '';

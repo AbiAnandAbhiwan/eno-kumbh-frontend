@@ -20,24 +20,24 @@ export class UserServiceService {
     return this.http.post(`${this.baseUrl}/verify-otp`, requestBody, { observe: 'response' });
   }
 
-  getAccessTokenForMappls(): Observable<string> {
-    const url = `${this.baseUrl}/access-token`;
+  // getAccessTokenForMappls(): Observable<string> {
+  //   const url = `${this.baseUrl}/access-token`;
 
-    return new Observable(observer => {
-      this.http.get<string>(url, { responseType: 'text' as 'json' }).subscribe({
-        next: (accessToken) => {
-          // Save the token to localStorage
-          console.log("below is token");
-          console.log(accessToken);
-          localStorage.setItem('mapplsAccessToken', accessToken);
+  //   return new Observable(observer => {
+  //     this.http.get<string>(url, { responseType: 'text' as 'json' }).subscribe({
+  //       next: (accessToken) => {
+  //         // Save the token to localStorage
+  //         console.log("below is token");
+  //         console.log(accessToken);
+  //         localStorage.setItem('mapplsAccessToken', accessToken);
 
-          observer.next(accessToken);
-          observer.complete();
-        },
-        error: (error) => {
-          observer.error(error);
-        }
-      });
-    });
-  }
+  //         observer.next(accessToken);
+  //         observer.complete();
+  //       },
+  //       error: (error) => {
+  //         observer.error(error);
+  //       }
+  //     });
+  //   });
+  // }
 }

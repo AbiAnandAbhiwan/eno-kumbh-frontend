@@ -22,14 +22,14 @@ export class NewMapComponent implements OnInit {
   mapplsClassObject: any = new mappls();
   mapplsPluginObject: any = new mappls_plugin();
   title = 'Map_angular';
-  token: any;
+  token = '7a11c5f0-b974-45b7-bab0-08f1775130aa';
 
   constructor(private router: Router){}
 
   ngOnInit() {
     this.userQuery = localStorage.getItem('userQuery');
     this.userLocation = localStorage.getItem('userLocation');
-    this.token = localStorage.getItem('mapplsAccessToken');
+    
     const loadObject = {
       map: true,
       layer: 'raster', // Optional Default Vector
