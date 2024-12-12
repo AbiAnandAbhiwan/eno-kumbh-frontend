@@ -43,7 +43,7 @@ export class WelcomeComponent implements OnInit{
           if (error.status === 400) {
             this.message = 'Error sending OTP. Please try again later.';
           } else {
-            this.message = 'Unexpected error occurred. Please try again.';
+            this.message = JSON.stringify(error);;
           }
         }
       });
