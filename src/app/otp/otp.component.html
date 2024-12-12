@@ -15,6 +15,9 @@
       >
         Please enter a valid OTP.
       </div>
+      <div *ngIf="message" class="text-danger mt-2">
+        {{ message }}
+      </div>
       <button
         type="button"
         class="btn btn-primary mt-3 w-100"

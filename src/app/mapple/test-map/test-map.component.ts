@@ -17,7 +17,7 @@ implements OnInit {
   formattedLocation: any;
   savedDestination = localStorage.getItem('destination');
   userLocation = localStorage.getItem('userLocation');
-  private token: string = '61ded60d-d48e-446e-88c9-fd47d56619a3';
+  token: any;
 
   mapProps = {
     center: [28.633, 77.2194],
@@ -28,6 +28,7 @@ implements OnInit {
   };
 
   ngOnInit() {
+    this.token = localStorage.getItem('mapplsAccessToken');
 
     const loadObject = {
       map: true,

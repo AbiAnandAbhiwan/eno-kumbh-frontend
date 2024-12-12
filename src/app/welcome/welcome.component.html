@@ -1,26 +1,27 @@
 <div class="container">
   <div class="form-wrapper">
-    <h1 class="text-center text-primary">Welcome to Kumbh 2025</h1>
-    <p class="text-center text-light">Register Mobile Number</p>
-    <form [formGroup]="phoneForm" class="form-group">
+    <h1 class="text-center text-primary">Enter Your Phone Number</h1>
+    <form [formGroup]="phoneForm" (ngSubmit)="submitPhone()" class="form-group">
       <input
         type="text"
         formControlName="phoneNumber"
         class="form-control"
-        placeholder="Enter your mobile number"
+        placeholder="Enter your phone number"
       />
       <div
         *ngIf="phoneForm.get('phoneNumber')?.touched && phoneForm.get('phoneNumber')?.invalid"
         class="text-danger mt-2"
       >
-        Please enter a valid 10-digit mobile number.
+        Please enter a valid phone number.
+      </div>
+      <div *ngIf="message" class="mt-2 text-center" [ngClass]="{'text-success': !message.includes('Error'), 'text-danger': message.includes('Error')}">
+        {{ message }}
       </div>
       <button
-        type="button"
-        class="btn btn-primary mt-3 w-100 text-submit"
-        (click)="submitPhone()"
+        type="submit"
+        class="btn btn-primary mt-3 w-100"
       >
-        Submit
+        Send OTP
       </button>
     </form>
   </div>
